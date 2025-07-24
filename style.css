@@ -1,0 +1,263 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #191919;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.capa {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher sem distorcer */
+  object-position: center -150px; 
+}
+
+.conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#alterarTema{
+  position: fixed;
+  top: 380px;
+  right: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: #857f5d;
+  padding: 20px;
+  font-size: 25px;
+  color: #f1eabf;
+  cursor: pointer;
+}
+
+.BotaoTarefa {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.BotaoTarefa input {
+  flex: 1;
+  max-width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #f1eabf;
+  color: #857f5d;
+}
+
+.BotaoTarefa button {
+  padding: 10px 20px;
+  background-color: #857f5d;
+  color: #f1eabf;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.BotaoTarefa button:hover {
+  background-color: #6c6650;
+  transition: background-color 0.3s;
+}
+
+.listas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Deixa responsivo */
+}
+
+.lista-grupo {
+  border-radius: 3px;
+  border: 2px #270000;
+  box-shadow: 0 2px 10px #e7e7e71a;
+  padding: 5px;
+  width: 320px;
+  color: #c2bfba;
+}
+
+.lista-grupo h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c2bfba;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.lista-grupo hr {
+  opacity: 12%;
+}
+
+.lista-grupo ul {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.lista-grupo li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.lista-grupo li:hover {
+  background-color: #ada678; 
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.2s, color 0.2s;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-left: 5px;
+}
+
+/*Precisei de muita ajuda no checkbox*/
+.lista-grupo input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #857f5d;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.lista-grupo input[type="checkbox"]:checked {
+  background-color: #25241b;
+  border: 2px solid #25241b;
+}
+
+.lista-grupo input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+}
+/*Até aqui é a bendita checkbox*/
+
+.lista-grupo label {
+  color: #f1eabf;
+  font-size: 16px;
+  flex: 1;
+}
+
+body.claro {
+  background-color: #f9f9f9;
+  color: #1e1e1e;
+}
+
+body.claro #alterarTema{
+  position: fixed;
+  top: 380px;
+  right: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: #d4b66b;
+  padding: 20px;
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+body.claro .lista-grupo {
+  background-color: #ffffff;
+  border: 2px solid #d6d6d6;
+  color: #1e1e1e;
+  box-shadow: 0 2px 10px #00000014;
+}
+
+body.claro .lista-grupo h4 {
+  color: #333333;
+}
+
+body.claro .lista-grupo hr {
+  opacity: 20%;
+  border-color: #ccc;
+}
+
+body.claro .lista-grupo li:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Input de tarefa */
+body.claro .BotaoTarefa input {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+}
+
+/* Botão */
+body.claro .BotaoTarefa button {
+  background-color: #d4b66b;
+  color: #ffffff;
+}
+
+body.claro .BotaoTarefa button:hover {
+  background-color: #c0a852;
+}
+
+/* Checkbox */
+body.claro .lista-grupo input[type="checkbox"] {
+  background-color: white;
+  border: 2px solid #c0a852;
+}
+
+body.claro .lista-grupo input[type="checkbox"]:checked {
+  background-color: #c0a852;
+  border-color: #c0a852;
+}
+
+body.claro .lista-grupo input[type="checkbox"]:checked::after {
+  color: white;
+}
+
+body.claro .lista-grupo label {
+  color: #333;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+body.claro .conteudo-popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #333333;
+}
+
+.conteudo-popup {
+  background-color: #191919;
+  color: #f1eabf;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<!--Comentários de estudo:
+Botão "AdicionarTarefa" não possui "name" para enviar ao backend, só o ID para o JS
+Para adicionar o css é diferente, tem que usar link-->
+
+<body>
+
+    <div class = "capa">
+    <img src="todoimages\capetown.jpg" alt="ImagemJapaoTurismo">
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="conteudo-popup">
+            <h3>Descrição da tarefa</h3>
+            <input type="checkbox" name="emAndamento" id="Andamento">
+            <textarea id="descricaoTarefa" rows="4" placeholder="Descreva a tarefa"></textarea>
+            <br />
+            <button onclick="salvarPopUp()">Salvar</button>
+            <button onclick="cancelarPopUp()">Cancelar</button>
+        </div>
+    </div>
+
+        <div id="alterarTema" onclick="trocaDeTemaJS()">Dark</div>
+
+    <div class="BotaoTarefa">
+        <input type="text" id="NovaTarefa" placeholder="Nova tarefa...">
+        <button onclick="AddTarefa()">Enviar tarefa</button>
+    </div>
+    
+    <div class="listas">
+        <div class="lista-grupo">
+            <h4>To do</h4>
+            <hr>
+            <ul id="tarefaJS"></ul>
+        </div>
+
+        <div class="lista-grupo">
+            <h4>Em progresso</h4>
+            <hr>
+            <ul id="tarefaUrgente"></ul>
+        </div>
+    
+        <div class="lista-grupo">
+            <h4>Concluído</h4>
+            <hr>
+            <ul id="tarefaConcluida"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
